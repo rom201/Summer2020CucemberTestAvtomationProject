@@ -40,7 +40,7 @@ Feature: As user I want to be able to login under different roles
       | sales manager | Dashboard       |
 
 
-  @negative_login
+  @negative_login @smoke
   Scenario: Invalid password
     When user logs in with "storemanager218" username and "wrong" password
     Then user verifies that "Invalid user name or password." message is displayed
