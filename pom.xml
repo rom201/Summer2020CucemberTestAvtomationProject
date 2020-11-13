@@ -31,12 +31,41 @@
                 <version>3.0.0-M5</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <parallel>classes</parallel>
+                    <threadCount>2</threadCount>
+                    <forkCount>2C</forkCount>
+                    <perCoreThreadCount>false</perCoreThreadCount>
+
                     <includes>
-                        <include>**/CucumberRunner.java</include>
+                        <include>**/CucumberRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
-        </plugins>
+
+        <plugin>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+            <version>5.0.0</version>
+            <executions>
+                <execution>
+                    <id>execution</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                    <configuration>
+                        <projectName>Cucumber HTML Reports</projectName>
+                        <outputDirectory>${project.build.directory}</outputDirectory>
+                        <inputDirectory>${project.build.directory}</inputDirectory>
+                        <jsonFiles>
+                            <param>**/cucumber*.json</param>
+                        </jsonFiles>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+
     </build>
 
 

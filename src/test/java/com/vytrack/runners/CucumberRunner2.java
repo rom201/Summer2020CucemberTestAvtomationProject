@@ -9,11 +9,11 @@ import org.junit.runner.RunWith;
 
        plugin = {
                "rerun:target/rerun.txt",
-               "json:target/cucumber.json"
+               "json:target/cucumber2.json"
        },
 
         features = {
-               "src/test/resources/features/activities"
+               "src/test/resources/features/fleet"
         },
      glue = "com/vytrack/step_defenitions",
      dryRun = false,
@@ -29,5 +29,5 @@ import org.junit.runner.RunWith;
 // if or one of them
 
 
-public class CucumberRunner {
+public class CucumberRunner2 {
 }
