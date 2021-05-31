@@ -36,7 +36,7 @@ public class BrowserUtils {
 
         // if not all text loaded
 
-        wait.until(ExpectedConditions.attributeToBe(element,"value",text));
+      //  wait.until(ExpectedConditions.attributeToBe(element,"value",text));
         // [java is great] --[java is g] selenium not fully enter data
         // we wait until text is complete entered
         //text is stored in the value atribute,

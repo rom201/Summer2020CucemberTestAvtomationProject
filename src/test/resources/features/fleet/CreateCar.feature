@@ -13,7 +13,7 @@ Feature: As user, I want to be able to create new cars
     And user clicks on save and close button
 
 
-  @add_car_scenario_outline
+  @add_car_scenario_outline @Smoke
   Scenario Outline: Add some car with <license plate>
     Given user is on the login page
     And user logs in as "<role>"

@@ -17,6 +17,8 @@ public abstract class BasePage {
     @FindBy(className = "oro-subtitle")
     protected WebElement pageSubTitle;
 
+
+
     @FindBy(xpath = "(//button[contains(text(),'Save and Close')])[1]")
     protected WebElement saveAndCloseBtn;
 

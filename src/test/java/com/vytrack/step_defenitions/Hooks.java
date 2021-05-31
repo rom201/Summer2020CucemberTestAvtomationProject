@@ -33,7 +33,7 @@ public class Hooks {
      */
 
     @Before("@db")
-    public void seyup(){
+    public void setup(){
         System.out.println("::Connecting to the data base::");
     }
 

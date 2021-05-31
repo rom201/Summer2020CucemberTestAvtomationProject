@@ -2,6 +2,7 @@ package com.vytrack.pages;
 
 import com.vytrack.utils.ConfigurationReader;
 import com.vytrack.utils.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,8 +16,12 @@ public class LoginPage extends BasePage{
     private WebElement username;
 
 
-    @FindBy(id ="prependedInput2" )
+   @FindBy(id ="prependedInput2" )
     private WebElement password;
+    
+    //private By password = By.id("prependedInput2");
+
+
 
     @FindBy(css ="[class='alert alert-error']")
     private WebElement warningMessage;
